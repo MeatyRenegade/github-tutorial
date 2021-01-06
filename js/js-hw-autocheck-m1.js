@@ -64,15 +64,29 @@ add(5, 10, 15);
 
 
 // Задача 9/36
-
 function makeMessage (name, price) {
-  // Пиши код ниже этой строки
   makeMessage('Радар', 6150);
   makeMessage('Сканер', 3500);
   makeMessage('Реактор', 8000);
   makeMessage('Двигатель', 4070);
-   const message = `Вы выбрали @{makeMessage}, цена за штуку @{price} кредитов`;
+  const message = `Вы выбрали @{makeMessage}, цена за штуку @{price} кредитов`;
   
-  // Пиши код выше этой строки
   return message;
 };
+
+
+// Задача 18/36
+function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+  let message;
+  
+  const totalPrice = (pricePerDroid * orderedQuantity);
+  
+  if(totalPrice > customerCredits) {
+    message = 'Недостаточно средств на счету!';    
+  } else {
+    customerCredits -= totalPrice;
+    message = `Вы купили ${orderedQuantity} дроидов, на счету осталось ${customerCredits} кредитов`;
+  }
+  
+  return message;
+}
