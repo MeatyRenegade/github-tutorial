@@ -90,3 +90,63 @@ function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
   
   return message;
 }
+
+// Задача 28/36
+function checkPassword(password) {
+  const ADMIN_PASSWORD = 'jqueryismyjam';
+  let message;
+
+  switch (password) {
+   case null:
+    message = 'Отменено пользователем!';
+    break;
+
+   case ADMIN_PASSWORD:
+    message = 'Добро пожаловать!';
+    break;
+
+   default:
+    message = 'Доступ запрещён, неверный пароль!';
+  }
+    
+  return message;
+}
+
+// Задача 29/36
+function getShippingCost(country) {
+  let message;
+
+  switch (country) {
+    case 'Китай':
+      message = 'Доставка в Китай будет стоить 100 кредитов';
+      break;
+
+    case 'Чили':
+      message = 'Доставка в Чили будет стоить 250 кредитов';
+      break;
+
+    case 'Австралия':
+      message = 'Доставка в Австралия будет стоить 170 кредитов'
+      break;
+      
+    case 'Ямайка':
+      message = 'Доставка в Ямайка будет стоить 120 кредитов'
+      break;
+      
+    default:
+      message = 'Извините, в вашу страну доставки нет';
+  }
+
+  return message;
+}
+
+const courseTopic = 'JavaSript для начинающих';
+
+  const courseTopicLength = courseTopic;
+  const firstElement = courseTopic;
+  const lastElement = courseTopic;
+
+  console.log(courseTopicLength.length);
+  console.log(firstElement[0]);
+  console.log(lastElement[courseTopic.length - 1]);
+  
