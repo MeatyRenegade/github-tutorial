@@ -421,12 +421,13 @@ class User {
 
 class Admin extends User {
   // Пиши код ниже этой строки
-  accessLevel;
 
   static AccessLevel = {
     BASIC: "basic",
     SUPERUSER: "superuser",
   };
+
+  accessLevel;
 
   constructor({ email, accessLevel }) {
     // Вызов конструктора родительского класса User
@@ -467,13 +468,13 @@ class User {
 class Admin extends User {
   // Пиши код ниже этой строки
 
-  accessLevel;
-  blacklistedEmails = [];
-
   static AccessLevel = {
     BASIC: "basic",
     SUPERUSER: "superuser",
   };
+
+  accessLevel;
+  blacklistedEmails = [];
 
   constructor({ email, accessLevel }) {
     super(email);
